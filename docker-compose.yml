@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    httpd:
+        image: httpd:latest
+        restart: always
+        ports:
+            - 80:80
+        volumes:
+            - ./www:/usr/local/apache2/htdocs
+    jenkins:
+        image: docker.io/bitnami/jenkins:2
+        ports:
+            - '8080:8080'
+            - '443:8443'
+            - '50000:50000'
+        environment:
+            - JENKINS_PASSWORD=user
+            - JENKINS_PASSWORD=aluno
+        volumes:
+            - 'jenkins_data:/bitnami/jenkins'
+            - ./www:/app:rw
+
+volumes:
+  jenkins_data:
+    driver: local
