@@ -5,7 +5,8 @@ sudo service docker start
 sudo usermod -a -G docker ec2-user
 
 # Docker compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /home/ec2-user/docker-compose
+sudo mv /home/ec2-user/docker-compose /usr/local/bin/docker-compose
 
 # Template
 curl -sSL https://raw.githubusercontent.com/robsonscruz/01-infra-docker/master/docker-compose.yml > /home/ec2-user/docker-compose.yml
