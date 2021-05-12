@@ -10,7 +10,7 @@ sudo chmod a+x /home/ec2-user/docker-compose && sudo mv /home/ec2-user/docker-co
 
 # Template
 curl -sSL https://raw.githubusercontent.com/robsonscruz/01-infra-docker/master/docker-compose.yml > /home/ec2-user/docker-compose.yml
-mkdir -p /home/ec2-user/www
+mkdir -p /home/ec2-user/www && chmod 777 -R /home/ec2-user/www
 
 # Start container
 docker-compose -f /home/ec2-user/docker-compose.yml up -d
