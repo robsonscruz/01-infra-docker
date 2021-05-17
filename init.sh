@@ -13,4 +13,4 @@ curl -sSL https://raw.githubusercontent.com/robsonscruz/01-infra-docker/master/d
 mkdir -p /home/ec2-user/www && chmod 777 -R /home/ec2-user/www
 
 # Start container
-docker-compose -f /home/ec2-user/docker-compose.yml up -d
+sudo docker-compose -f /home/ec2-user/docker-compose.yml up -d
