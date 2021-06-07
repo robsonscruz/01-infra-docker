@@ -16,7 +16,7 @@ services:
             - '50000:50000'
         environment:
             - JENKINS_PASSWORD=user
-            - JENKINS_PASSWORD=aluno
+            - JENKINS_PASSWORD=aluno1234
         volumes:
             - 'jenkins_data:/bitnami/jenkins'
             - ./www:/app:rw
