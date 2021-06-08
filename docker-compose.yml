@@ -28,7 +28,6 @@ services:
             - 'jenkins_data:/bitnami/jenkins'
             - ./www:/app:rw
             - ./backend:/backend:rw
-
 volumes:
   jenkins_data:
     driver: local
