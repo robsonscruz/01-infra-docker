@@ -16,7 +16,7 @@ services:
         volumes:
             - ./backend:/usr/local/tomcat/webapps
     jenkins:
-        image: docker.io/bitnami/jenkins:2
+        image: robsoncruz/jenkins-jv:latest
         ports:
             - '8080:8080'
             - '443:8443'
